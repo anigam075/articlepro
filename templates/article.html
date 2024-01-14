@@ -1,112 +1,17 @@
-<!doctype html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <title>Shahala</title>
-</head>
-
-<body class="article-pg">
-    <header class="mt-0 pt-0">
-        <div class="bg-cover clearfix pt-3">
-            <h2 class="logo">Shahala</h2>
-            <nav class="nav nav-fill mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://facebook.com/fh5co" target="_blank"><i
-                            class="fab fa-facebook-f"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://twitter.com/fh5co" target="_blank"><i
-                            class="fab fa-twitter"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fab fa-google-plus-g"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-rss"></i></a>
-                </li>
-            </nav>
-
-
-            <input type="text" id="nav-search" class="nav-search mx-auto" name="" class="form-control">
-            <div class="ml-0 mr-0 pb-1">
-                <nav class="navbar navbar-expand-md">
-
-                    <button class="navbar-toggler ml-auto" data-target="#my-nav" data-toggle="collapse"
-                        aria-controls="my-nav" aria-expanded="false" onclick="myFunction(this)"
-                        aria-label="Toggle navigation">
-                        <span class="bar1"></span> <span class="bar2"></span> <span class="bar3"></span>
-                    </button>
-                    <div id="my-nav" class="collapse navbar-collapse">
-                        <ul class="navbar-nav mx-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">NEWS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">HISTORY</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">CULTURE</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">TECH</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">LIFE</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">OPINION</a>
-                            </li>
-                            <li class="nav-item">
-                                <form action="" method="POST">
-                                    <div class="input-group mt-0 mx-auto" style="width:16px;">
-
-                                        <div class="">
-                                            <img src="images/search-icon.png" id="toggle-search"
-                                                class="ml-2 toggle-search" alt="search icon">
-                                        </div>
-                                    </div>
-                                </form>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            <ul class="nav nav-fill mx-auto breadc pb-3">
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Home</a>
-                </li>
-                <li><img src="images/star-shape.png" class="mt-2" alt=""></li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Article</a>
-                </li>
-            </ul>
-        </div>
-
-
-
-    </header>
-
+{% block content %}
+{% load static %}
 
     <div class="container-fluid ar-content">
         <div class="container">
             <div class="row">
                 <div class="col-lg-9 pr-5">
                     <div class="card ar-img-over">
-                        <img class="card-img" src="images/article-banner.png" alt="">
+                        <img class="card-img" src="{% static 'images/article-banner.png' %}" alt="">
                         <div class="card-img-overlay">
                             <a href="#" class="d-flex align-items-center justify-content-center"><img
-                                    src="images/full-screen.png" alt=""></a>
+                                    src="{% static 'images/full-screen.png' %}" alt=""></a>
                         </div>
                     </div>
                     <div class="row date-time mt-3">
@@ -126,7 +31,7 @@
 
                     <div class="media my-5">
                         <div class="q-box d-flex align-items-center justify-content-center"><img
-                                src="images/quote.png" alt=""></div>
+                                src="{% static 'images/quote.png' %}" alt=""></div>
                         <div class="bbg media-body">
                             <h5 class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor
                                 incidunt ut labore et dolore magna aliqua.</h5>
@@ -164,7 +69,7 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="images/ar-left.png" class="w-100" alt="">
+                            <img src="{% static 'images/ar-left.png' %}" class="w-100" alt="">
                             <p class="img-tag text-center">LIFESTYLE</p>
                             <hr class="mt-0" />
                             <h3 class="text-center">Inside a Surf Champion’s World</h3>
@@ -191,7 +96,7 @@
 
                         </div>
                         <div class="col-md-6 mt-md-4">
-                            <img src="images/ar-right.png" class="w-100" alt="">
+                            <img src="{% static 'images/ar-right.png' %}" class="w-100" alt="">
                             <p class="img-tag text-center">FASHION</p>
                             <hr class="mt-0" />
                             <h3 class="text-center">10 Places in France Every
@@ -223,7 +128,7 @@
                         <hr class="ml-0" />
                         <div class="media pt-5">
                             <div class="card mr-4">
-                                <img src="images/comment-user1.png" alt="" class="card-img">
+                                <img src="{% static 'images/comment-user1.png' %}" alt="" class="card-img">
                                 <div class="card-img-overlay">
 
                                 </div>
@@ -245,7 +150,7 @@
                                     vitae, fermentum nec turpis.</p>
                                 <div class="media py-5 mt-5 both-border">
                                     <div class="card mr-4">
-                                        <img src="images/comment-user2.png" alt="" class="card-img">
+                                        <img src="{% static 'images/comment-user2.png' %}" alt="" class="card-img">
                                         <div class="card-img-overlay">
 
                                         </div>
@@ -273,7 +178,7 @@
 
                         <div class="media py-5 bottom-border">
                             <div class="card mr-4">
-                                <img src="images/comment-user3.png" alt="" class="card-img">
+                                <img src="{% static 'images/comment-user3.png' %}" alt="" class="card-img">
                                 <div class="card-img-overlay">
 
                                 </div>
@@ -329,7 +234,7 @@
                         <div class="owl-carousel owl-carousel4 owl-theme">
                             <div>
                                 <div class="card pb-5"> <img class="card-img link-img rounded"
-                                        src="images/carlla-willstons.jpg" alt="">
+                                        src="{% static 'images/carlla-willstons.jpg' %}" alt="">
                                 </div>
                                 <h3 class="text-center mt-3 mb-0">Carlla Willstons</h3>
                                 <p class="text-center mt-1 third-clr">Reporter</p>
@@ -337,7 +242,7 @@
 
                             <div>
                                 <div class="card pb-5"> <img class="card-img link-img rounded"
-                                        src="images/carlla-willstons.jpg" alt="">
+                                        src="{% static 'images/carlla-willstons.jpg' %}" alt="">
                                 </div>
                                 <h3 class="text-center mt-3 mb-0">Carlla Willstons</h3>
                                 <p class="text-center mt-1 third-clr">Reporter</p>
@@ -345,7 +250,7 @@
 
                             <div>
                                 <div class="card pb-5"> <img class="card-img link-img rounded"
-                                        src="images/carlla-willstons.jpg" alt="">
+                                        src="{% static 'images/carlla-willstons.jpg' %}" alt="">
                                 </div>
                                 <h3 class="text-center mt-3 mb-0">Carlla Willstons</h3>
                                 <p class="text-center mt-1 third-clr">Reporter</p>
@@ -353,7 +258,7 @@
 
                             <div>
                                 <div class="card pb-5"> <img class="card-img link-img rounded"
-                                        src="images/carlla-willstons.jpg" alt="">
+                                        src="{% static 'images/carlla-willstons.jpg' %}" alt="">
                                 </div>
                                 <h3 class="text-center mt-3 mb-0">Carlla Willstons</h3>
                                 <p class="text-center mt-1 third-clr">Reporter</p>
@@ -433,49 +338,49 @@
                         <div class="row insta-links mt-2">
                             <div class="col-md-4 col-sm-6 col-6">
                                 <div class="card">
-                                    <img class="card-img w-100" src="images/insta1.png" alt="">
+                                    <img class="card-img w-100" src="{% static 'images/insta1.png' %}" alt="">
                                     <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                                        <a href="#"><img src="images/right-icon.png" alt=""></a>
+                                        <a href="#"><img src="{% static 'images/right-icon.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 col-6">
                                 <div class="card">
-                                    <img class="card-img w-100" src="images/insta2.png" alt="">
+                                    <img class="card-img w-100" src="{% static 'images/insta2.png' %}" alt="">
                                     <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                                        <a href="#"><img src="images/right-icon.png" alt=""></a>
+                                        <a href="#"><img src="{% static 'images/right-icon.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 col-6">
                                 <div class="card">
-                                    <img class="card-img w-100" src="images/insta3.png" alt="">
+                                    <img class="card-img w-100" src="{% static 'images/insta3.png' %}" alt="">
                                     <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                                        <a href="#"><img src="images/right-icon.png" alt=""></a>
+                                        <a href="#"><img src="{% static 'images/right-icon.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 col-6">
                                 <div class="card">
-                                    <img class="card-img w-100" src="images/insta4.png" alt="">
+                                    <img class="card-img w-100" src="{% static 'images/insta4.png' %}" alt="">
                                     <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                                        <a href="#"><img src="images/right-icon.png" alt=""></a>
+                                        <a href="#"><img src="{% static 'images/right-icon.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 col-6">
                                 <div class="card">
-                                    <img class="card-img w-100" src="images/insta5.png" alt="">
+                                    <img class="card-img w-100" src="{% static 'images/insta5.png' %}" alt="">
                                     <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                                        <a href="#"><img src="images/right-icon.png" alt=""></a>
+                                        <a href="#"><img src="{% static 'images/right-icon.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 col-6">
                                 <div class="card">
-                                    <img class="card-img w-100" src="images/insta6.png" alt="">
+                                    <img class="card-img w-100" src="{% static 'images/insta6.png' %}" alt="">
                                     <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                                        <a href="#"><img src="images/right-icon.png" alt=""></a>
+                                        <a href="#"><img src="{% static 'images/right-icon.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -486,7 +391,7 @@
                         <div class="tranding-posts mt-4">
                             <div class="media my-3">
                                 <div class="d-flex align-items-center justify-content-center"><a href="#"><img
-                                            src="images/t-post1.png" alt=""></a></div>
+                                            src="{% static 'images/t-post1.png' %}" alt=""></a></div>
                                 <div
                                     class="media-body text-center d-flex align-items-center justify-content-center flex-column px-3">
                                     <a href="#">The latest trends
@@ -496,7 +401,7 @@
                             </div>
                             <div class="media my-3">
                                 <div class="d-flex align-items-center justify-content-center"><a href="#"><img
-                                            src="images/t-post2.png" alt=""></a></div>
+                                            src="{% static 'images/t-post2.png' %}" alt=""></a></div>
                                 <div
                                     class="media-body text-center d-flex align-items-center justify-content-center flex-column px-3">
                                     <a href="#">Effective fine art
@@ -506,7 +411,7 @@
                             </div>
                             <div class="media my-3">
                                 <div class="d-flex align-items-center justify-content-center"><a href="#"><img
-                                            src="images/t-post3.png" alt=""></a></div>
+                                            src="{% static 'images/t-post3.png' %}" alt=""></a></div>
                                 <div
                                     class="media-body text-center d-flex align-items-center justify-content-center flex-column px-3">
                                     <a href="#">How to design
@@ -521,55 +426,4 @@
         </div>
     </div>
 
-
-    <div class="container-fluid jumbotron-fluid stay mt-5 pt-5 pb-5">
-        <h2 class="text-center">Stay Updated</h2>
-        <p class="text-center mt-2">Sign up for our newsletter to receive the latest news and event postings.</p>
-        <div class="input-group mt-4 mx-auto" style="max-width: 640px">
-            <input type="email" class="form-control" placeholder="YOUR EMAIL ADDRESS">
-            <div class="">
-                <button class="btn btn-success ml-2" type="submit">SIGN UP</button>
-            </div>
-        </div>
-    </div>
-
-    <footer class="container-fluid pt-5">
-        <div class="container">
-            <h2 class="logo text-center">Shahala</h2>
-            <nav class="nav nav-fill mx-auto mt-5">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://facebook.com/fh5co" target="_blank"><i
-                            class="fab fa-facebook-f"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://facebook.com/fh5co" target="_blank"><i
-                            class="fab fa-twitter"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fab fa-google-plus-g"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-rss"></i></a>
-                </li>
-            </nav>
-        </div>
-        <div class="copy-right mt-4">
-            <p class="text-center">&copy; 2019 <a href="#" class="text-white">Shahala</a>. All Rights Reserved. Design
-                by <a href="https://freehtml5.co/shahala" target="_blank" class="text-white">FreeHTML5.co</a>.</p>
-        </div>
-    </footer>
-
-    <script src="js/popper.min.js"></script>
-    <script src="js/jquery-1.12.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/article.js"></script>
-
-    
-
-</body>
-
-</html>
+{% endblock %}

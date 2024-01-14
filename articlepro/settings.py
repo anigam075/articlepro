@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'articlepro.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sys',
+        'NAME': 'articles',
         'USER': 'root',
         'PASSWORD': '007@Rockstar',
         'HOST': '127.0.0.1',
